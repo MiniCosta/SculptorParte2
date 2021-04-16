@@ -18,7 +18,7 @@ int main(){
     Interpretador parser;
     std:: vector<FiguraGeometrica*> figs;
 
-    figs = parser.parse("ler.txt");
+    figs = parser.parse("arqOFF.txt");
 
     s1 = new Sculptor(parser.getDimx(), parser.getDimy(), parser.getDimz());
 cout<< figs.size() <<endl;
@@ -26,11 +26,11 @@ cout<< figs.size() <<endl;
                 figs[i]->draw(*s1);
     }
     s1->limpaVoxels();
-    s1->writeOFF((char*)"saida.OFF");
+    s1->writeOFF((char*)"arquivo.OFF");
     for(size_t i=0; i<figs.size(); i++){
         delete figs[i];
     }
     delete s1;
-    cout<< "Deu certo" <<endl;
+    
     return 0;
 }
