@@ -18,7 +18,7 @@ int main(){
     Interpretador parser;
     std:: vector<FiguraGeometrica*> figs;
 
-    figs = parser.parse("arqOFF.txt");
+    figs = parser.parse("arq.txt");
 
     s1 = new Sculptor(parser.getDimx(), parser.getDimy(), parser.getDimz());
 cout<< figs.size() <<endl;
