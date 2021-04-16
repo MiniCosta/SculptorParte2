@@ -30,14 +30,9 @@ std::vector<FiguraGeometrica *> Interpretador::parse(std::string filename){
 
 
     ofstream entrada;
-        //entrada.open("ler.txt");
-        fin.open("ler.txt");
-                    if(!fin.is_open()){
-                        cout<<"Erro ao abrir o arquivo ou arquivo inexistente"<<endl;
-                        exit(0);
-    }
-
-
+        
+    fin.open("arq.txt");
+                    
     while(fin.good()){
         getline(fin, s);
         if(fin.good()){
